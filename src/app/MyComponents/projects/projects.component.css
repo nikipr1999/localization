@@ -1,0 +1,41 @@
+*{
+    width: 100%;
+    overflow: hidden;
+}
+.container1{
+    background-color: white;
+    height: 6%;
+    padding-left: 3%;
+    justify-content: space-between;
+    color: #3dcd58;
+    font-size:small ;
+}
+.container1-2{
+    padding-right: 2%;
+}
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;    
+    border-top: 8px solid black;
+    
+  }
+.container2{
+    background-color:#3dcd58;
+    height: 6%;
+    color: white;
+    padding: 0.5%;
+    padding-left: 2%;
+}
+.container3{
+    background-color:#238835;
+    height: 2%;
+}
+.container4{
+    background-color:#eceaea;
+    height:100%;
+    width: 100%;
+}
+
+

@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="img" >
+        
+    </div> 
+    <div class="container1"></div>
+    <div class="container2"></div>
+    <div class="middle">
+        <div class="name">
+            mySchneider
+            <h1><b>Localization</b></h1>
+        </div>
+        <div></div>
+        <div></div>
+        <div >        
+                <form fxLayout="column" class="login-form" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" novalidate>
+                    <div class='login-form-field'>
+                        <label for="Username">Username<span class="required">*</span></label>
+                        <input type="text" name="Username" id="Username" placeholder="Enter Username"  formControlName="username" required> 
+                        
+                    </div>
+                    
+                    <div class='login-form-field'> 
+                        <label for="Password">Password<span class="required">*</span></label>
+                        <input id="Password" name="Password" type="password" placeholder="Enter Password"  formControlName="password">  
+                    </div>
+                    <div class='login-form-field'>
+                        <button mat-braised-utton type="submit" color="accent" > Login </button>
+                    </div>
+                </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>This application is protected by copyright law and international treaties.<br>
+                © 2020 Schneider Electric Industries SAS. All rights reserved
+            </p>
+        </div>
+        <div id="logo">
+            <img height="60%"  src="../../assets/images/logo.png">
+        </div>
+    </div>
+</div>
+

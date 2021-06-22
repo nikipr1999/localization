@@ -1,0 +1,12 @@
+<div class="row col-sm-12 col-md-12 col-lg-12 transform2"  *ngFor="let eachrow of segmentedprojects" >
+  <div class="col-sm-3 col-md-3 col-lg-3 card" fxLayout="row" *ngFor="let project of eachrow">
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted" >{{ project.type }}</h6>
+      <h5 class="card-title"><b>{{project.name}}</b></h5>
+      <p class="card-text">Total Countries:  {{project.country}}</p>
+    </div>
+    <div>
+      <img src="../../../assets/images/Admin.png" style="height: 70px;width: 70px;">
+    </div>
+  </div>
+</div>
