@@ -1,1 +1,46 @@
-<p>project-import works!</p>
+<app-projects></app-projects>
+<div class=" discription" style="background-color:#f7f7f7;" >
+    <div class="col-sm-3 col-md-3 col-lg-3 card" fxLayout="row">
+        
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted" >App</h6>
+                <h5 class="card-title"><b>Electrician</b></h5>
+                <p class="card-text"><span style="font-size: 12px;">Total Countries:    </span>
+                  <span style="font-size: 25px;">10</span></p>
+            </div>
+              
+        <div>        
+            <img src="../../../assets/images/Admin.png" style="height: 70px;width: 70px;">
+        </div>
+
+        <div class="vl"></div>
+
+        <div class="filter">            
+            <label for="Filter" style="font-size:1.5em">Filter:    </label>
+                <select id="Filter" name="Filter" style="margin-left:15%;">
+                <option value="Mobile">Mobile</option>
+                <option value="Webapp">Webapp</option>
+                <option value="Website">Website</option>
+                <option value="Software">Software</option>
+                </select>
+        </div>
+
+        <div class="filter">            
+            <label for="Country" style="font-size:1.5em">Country:    </label>
+                <select id="Country" name="Country" style="margin-left:15%;">
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="China">China</option>
+                <option value="Korea">Korea</option>
+                </select>
+        </div>
+
+        <div class="col search">
+            <input type="text" placeholder="Search..">
+        </div>
+
+      </div>    <!--Card ends here -->
+      <div class='login-form-field'>
+        <button mat-braised-utton type="submit" color="accent" > icon Import </button>
+    </div>
+</div>

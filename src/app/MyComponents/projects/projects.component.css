@@ -1,24 +1,32 @@
 *{
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
+    height:100%;
+    width: 100%;
 }
 .container1{
     background-color: white;
     height: 6%;
-    padding-left: 3%;
+    min-height: 35px;
+    padding-left: 2%;
+    padding-right: 0;
     justify-content: space-between;
     color: #3dcd58;
     font-size:small ;
 }
 .container1-2{
+    float:right;
     padding-right: 2%;
+    
 }
 .arrow-down {
-    width: 0; 
-    height: 0; 
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;    
-    border-top: 8px solid black;
+    height: 0;
+    width: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;    
+    border-top: 6px solid black;
+    margin-top: 1.6em;
+    margin-left: 0%;
     
   }
 .container2{
@@ -32,10 +40,3 @@
     background-color:#238835;
     height: 2%;
 }
-.container4{
-    background-color:#eceaea;
-    height:100%;
-    width: 100%;
-}
-
-
