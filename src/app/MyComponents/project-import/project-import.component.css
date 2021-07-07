@@ -1,19 +1,30 @@
 .discription{
   margin: 0%;
-  padding: 0%;
+  padding-top: 2%;
   width: 100%;
-  height: 82%;
+  height: 86%;
 }
 .card{
   background-color: white;
-  justify-content: space-around;
-  margin-top: 0%;
+  justify-content: space-around;  
+  align-items: center;
   max-height: 150px; 
   width: 95%;
   margin: 2% 2% 2%;
+  margin-top: 0%;
   border-color: white;
   padding: 1rem;
+
 } 
+
+.card-body{
+  max-width: 20%;
+}
+
+select{
+  width: 70%;
+  margin-left:10%;
+}
 button{
   color: white;
   border: #3dcd58;
@@ -24,12 +35,82 @@ button{
 .vl {
   border-left: 1px solid black;
   height: 7em;
-  margin-right: 2em;
-  margin-left: 2em;
+  margin: 0% 3%;
 }
 .filter{
   display: flex;
   height: 10%;
   align-items: center;
-  margin-right: 7%;
+  margin: 0% 2% 0% 0%;
+  width: 20%;
+}
+.search{
+  width: 20%;
+}
+input{
+  width: 100%;
+}
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 25%;
+  right: 35%;
+  background-color: white;
+  min-height: fit-content;
+  z-index: 1;
+}
+
+.upload-bar{
+  height: 30%;
+  background-color:#3dcd58 ;
+  color: white;
+  font-size: x-large;
+  padding: 0.4em;
+  display: flex;
+  justify-content: space-between;
+}
+.upload-text{
+  padding: 0.7em;
+}
+
+
+/* X cross button */
+.tag-remove::before {
+  content: 'x'; 
+   /* here is your X(cross) sign. */
+  color:black;
+  font-weight: 200;
+}
+#mdiv {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+}
+
+.mdiv {
+  height: 25px;
+  width: 2px;
+  margin-left: 11px;
+  background-color: black;
+  transform: rotate(45deg);
+  Z-index: 1;
+}
+
+.md {
+  height: 25px;
+  width: 2px;
+  background-color: black;
+  transform: rotate(90deg);
+  Z-index: 2;
+}
+
+#upload-btn{
+  color: white;
+  border: #3dcd58;
+  background-color:#3dcd58;
+  padding: 1%;
+  margin: 0% 5% 5% 80%;
 }

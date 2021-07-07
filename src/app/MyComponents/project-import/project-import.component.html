@@ -5,8 +5,8 @@
             <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted" >App</h6>
                 <h5 class="card-title"><b>Electrician</b></h5>
-                <p class="card-text"><span style="font-size: 12px;">Total Countries:    </span>
-                  <span style="font-size: 25px;">10</span></p>
+                <p class="card-text"><span style="font-size: 0.8em;">Total Countries:    </span>
+                  <span style="font-size: 2em;">10</span></p>
             </div>
               
         <div>        
@@ -16,8 +16,8 @@
         <div class="vl"></div>
 
         <div class="filter">            
-            <label for="Filter" style="font-size:1.5em">Filter:    </label>
-                <select id="Filter" name="Filter" style="margin-left:15%;">
+            <label for="Filter" style="font-size:1.5em">Filter:</label>
+                <select id="Filter" name="Filter">
                 <option value="Mobile">Mobile</option>
                 <option value="Webapp">Webapp</option>
                 <option value="Website">Website</option>
@@ -26,8 +26,8 @@
         </div>
 
         <div class="filter">            
-            <label for="Country" style="font-size:1.5em">Country:    </label>
-                <select id="Country" name="Country" style="margin-left:15%;">
+            <label for="Country" style="font-size:1.5em">Country:</label>
+                <select id="Country" name="Country">
                 <option value="India">India</option>
                 <option value="USA">USA</option>
                 <option value="China">China</option>
@@ -35,12 +35,34 @@
                 </select>
         </div>
 
-        <div class="col search">
+        <div class="search">
             <input type="text" placeholder="Search..">
         </div>
 
       </div>    <!--Card ends here -->
-      <div class='login-form-field'>
-        <button mat-braised-utton type="submit" color="accent" > icon Import </button>
+      <div >
+          
+        <button mat-braised-button color="accent" (click)="openForm()" > icon Import </button>
+        <div class="form-popup" id="FileUpload">
+            <div class="upload-bar" >
+                Upload Localization File
+                <div id="mdiv" (click)="closeForm()">
+                    <div class="mdiv">
+                      <div class="md" ></div>
+                    </div>
+                </div>
+            </div>
+            <div class = "upload-text">
+                Import Localization Excel File :  
+                <input id="fileSelect" type="file" 
+                accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+                <br>
+                <br>
+                * Only xls/xlsx files are allowed.
+                <hr>  
+            </div>  
+            <button id="upload-btn"  mat-braised-button color="accent" (click)="closeForm()">Upload</button>
+        </div>
     </div>
 </div>
+

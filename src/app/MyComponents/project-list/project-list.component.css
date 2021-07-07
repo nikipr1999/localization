@@ -1,11 +1,13 @@
-
+.contain{
+    padding:4% 1% 0% 3%;
+    background-color: #f7f7f7;
+}
 .card{
     background-color: white!important;
     justify-content: space-between;
-    margin:2% ;
+    margin: 2% 1% ;
     max-height: 150px; 
-    max-width: 30rem;
-    margin-left: 5.5%;
+    min-width: 31%;
     border-radius: 3%;
     border-color: white;
     padding: 1rem;

@@ -1,6 +1,6 @@
 <app-projects></app-projects>
-<div class="row col-sm-12 col-md-12 col-lg-12 transform2"  *ngFor="let eachrow of segmentedprojects"  
-    style="background-color: #f7f7f7;width: 100%;">
+<div class="contain">
+  <div class="row col-sm-12 col-md-12 col-lg-12 transform2"  *ngFor="let eachrow of segmentedprojects">
   <div class="col-sm-3 col-md-3 col-lg-3 card" fxLayout="row" *ngFor="let project of eachrow">
     <div class="card-body">
       <h6 class="card-subtitle mb-2 text-muted" >{{ project.type }}</h6>
@@ -12,4 +12,5 @@
       <img src="../../../assets/images/Admin.png" style="height:5em">
     </div>
   </div>
+</div>
 </div>
