@@ -1,68 +1,93 @@
 <app-projects></app-projects>
-<div class=" discription" style="background-color:#f7f7f7;" >
+<div class=" discription" style="background-color:#f7f7f7;">
     <div class="col-sm-3 col-md-3 col-lg-3 card" fxLayout="row">
-        
-            <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted" >App</h6>
-                <h5 class="card-title"><b>Electrician</b></h5>
-                <p class="card-text"><span style="font-size: 0.8em;">Total Countries:    </span>
-                  <span style="font-size: 2em;">10</span></p>
-            </div>
-              
-        <div>        
+
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted" style="font-size: 1.2vw;">App</h6>
+            <h5 class="card-title" style="font-size: 2vw;"><b>Electrician</b></h5>
+            <p class="card-text"><span style="font-size: 0.8vw;">Total Countries: </span>
+                <span style="font-size: 2vw;">10</span>
+            </p>
+        </div>
+
+        <div>
             <img src="../../../assets/images/Admin.png" style="height: 70px;width: 70px;">
         </div>
 
         <div class="vl"></div>
 
-        <div class="filter">            
-            <label for="Filter" style="font-size:1.5em">Filter:</label>
-                <select id="Filter" name="Filter">
+        <div class="filter">
+            <label for="Filter" style="font-size:1.5vw">Filter:</label>
+            <select id="Filter" name="Filter">
                 <option value="Mobile">Mobile</option>
                 <option value="Webapp">Webapp</option>
                 <option value="Website">Website</option>
                 <option value="Software">Software</option>
-                </select>
+            </select>
         </div>
 
-        <div class="filter">            
-            <label for="Country" style="font-size:1.5em">Country:</label>
-                <select id="Country" name="Country">
+        <div class="filter">
+            <label for="Country" style="font-size:1.5vw">Country:</label>
+            <select id="Country" name="Country">
                 <option value="India">India</option>
                 <option value="USA">USA</option>
                 <option value="China">China</option>
                 <option value="Korea">Korea</option>
-                </select>
+            </select>
         </div>
 
         <div class="search">
             <input type="text" placeholder="Search..">
         </div>
 
-      </div>    <!--Card ends here -->
-      <div >
-          
-        <button mat-braised-button color="accent" (click)="openForm()" > icon Import </button>
-        <div class="form-popup" id="FileUpload">
-            <div class="upload-bar" >
-                Upload Localization File
-                <div id="mdiv" (click)="closeForm()">
-                    <div class="mdiv">
-                      <div class="md" ></div>
-                    </div>
+    </div>
+    <!--Card ends here -->
+
+    <div *ngIf="excel_file_exists else elseBlock">
+        <div class="edit_mode" *ngIf="edit_mode_on else fileavailable">
+            <button type="button" class="btn btn-secondary"> UPDATE </button>
+            <button type="button" class="btn btn-outline-secondary" (click)="edit_mode_on=false">CANCEL</button>
+        </div>
+        <ng-template #fileavailable>
+            <div class="editStrings">
+                <div class="editStrings1">
+                    <button type="button" class="btn btn-secondary" (click)="edit_mode_on=true"> EDIT </button>
+                    <button type="button" class="btn btn-outline-secondary">Add New Record</button>
+                </div>
+                <div class="editStrings1">
+                    <a href="#"><img src="../../../assets/images/export.svg">  Export</a>
+                    <a href="#"><img src="../../../assets/images/export.svg">  Import</a>
                 </div>
             </div>
-            <div class = "upload-text">
-                Import Localization Excel File :  
-                <input id="fileSelect" type="file" 
-                accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
-                <br>
-                <br>
-                * Only xls/xlsx files are allowed.
-                <hr>  
-            </div>  
-            <button id="upload-btn"  mat-braised-button color="accent" (click)="closeForm()">Upload</button>
-        </div>
+        </ng-template>     
+        <app-string-table [edit_mode_on]="edit_mode_on"></app-string-table>
     </div>
-</div>
 
+    <ng-template #elseBlock>
+        <div>
+            <button id="import-btn" mat-braised-button color="accent" (click)="openForm()"> icon Import </button>
+            <div class="form-popup" id="FileUpload">
+                <div class="upload-bar">
+                    Upload Localization File
+                    <div id="mdiv" (click)="closeForm()">
+                        <div class="mdiv">
+                            <div class="md"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="upload-text">
+                    Import Localization Excel File :
+                    <input id="fileSelect" type="file"
+                        accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+                    <br>
+                    <br>
+                    * Only xls/xlsx files are allowed.
+                    <hr>
+                </div>
+                <button id="upload-btn" mat-braised-button color="accent" (click)="closeForm()">Upload</button>
+            </div>
+        </div>
+    </ng-template>
+    
+    
+</div>

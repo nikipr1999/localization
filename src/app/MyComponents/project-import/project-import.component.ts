@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-project-import',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectImportComponent implements OnInit {
 
-  
+  excel_file_exists=true;
+  @Input() edit_mode_on=false;
+
+
 
   constructor() { }
 

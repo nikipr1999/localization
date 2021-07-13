@@ -9,10 +9,8 @@
             mySchneider
             <h1><b>Localization</b></h1>
         </div>
-        <div></div>
-        <div></div>
-        <div >        
-                <form fxLayout="column" class="login-form" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="login">        
+                <form fxLayout="column" class="login-form" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" >
                     <div class='login-form-field'>
                         <label for="Username">Username<span class="required">*</span></label>
                         <input type="text" name="Username" id="Username" placeholder="Enter Username"  formControlName="username" required> 
@@ -36,7 +34,7 @@
             </p>
         </div>
         <div id="logo">
-            <img height="70%"  src="../../assets/images/logo.png">
+            <img height="80%"  src="../../assets/images/logo.png">
         </div>
     </div>
 </div>

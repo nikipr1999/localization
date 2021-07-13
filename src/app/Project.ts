@@ -3,3 +3,8 @@ export class Project {
     name: string
     country: number
 }
+export class ProjectStrings {
+    keywords: string[]
+    languages: string[]
+    strings: string[][]
+}

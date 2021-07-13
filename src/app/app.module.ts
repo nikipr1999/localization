@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectListComponent } from './MyComponents/project-list/project-list.component';
 import { ProjectsComponent } from './MyComponents/projects/projects.component';
 import { ProjectImportComponent } from './MyComponents/project-import/project-import.component';
+import { StringTableComponent } from './MyComponents/string-table/string-table.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProjectImportComponent } from './MyComponents/project-import/project-im
     LoginComponent,
     ProjectListComponent,
     ProjectsComponent,
-    ProjectImportComponent
+    ProjectImportComponent,
+    StringTableComponent
   ],
   imports: [
     BrowserModule,
