@@ -9,7 +9,7 @@ import { ProjectStrings } from 'src/app/Project';
 export class ProjectImportComponent implements OnInit {
 
   public projectstrings: ProjectStrings;
-  excel_file_exists=true;
+  excel_file_exists=false;
   edit_mode_on=false;
 
   constructor () {
