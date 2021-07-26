@@ -60,7 +60,21 @@
                 </div>
             </div>
         </ng-template>     
-        <app-string-table [edit_mode_on]="edit_mode_on"></app-string-table>
+        <table>
+            <tr>
+                <th>Key_value</th>
+                <th *ngFor=" let language of projectstrings.languages" >
+                    {{ language }}
+                </th>
+            </tr>
+            <tr *ngFor="let key of projectstrings.keywords; let i = index">
+                <td>{{ key }}</td>        
+                <td  *ngFor="let language of projectstrings.languages; let j=index">
+                    <input placeholder="{{ projectstrings.strings[i][j] }}" [disabled]=!edit_mode_on>
+                </td>
+            </tr>
+        </table>
+        
     </div>
 
     <ng-template #elseBlock>
